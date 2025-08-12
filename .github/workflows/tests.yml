@@ -17,7 +17,7 @@ jobs:
     name: Lint Python
     runs-on: ubuntu-latest
     steps:
-    - uses: actions/checkout@v4
+    - uses: actions/checkout@v5
     - run: pip install --user ruff
     - run: ruff check --output-format=github --select="E,F,PLC,PLE,UP,W,YTT" --ignore="E721,PLC1901,S101,UP031" --target-version=py38 .
 
@@ -26,7 +26,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
     - name: Checkout Repository
-      uses: actions/checkout@v4
+      uses: actions/checkout@v5
     - name: Use Node.js 22.x
       uses: actions/setup-node@v4
       with:
@@ -41,7 +41,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
     - name: Checkout Repository
-      uses: actions/checkout@v4
+      uses: actions/checkout@v5
     - name: Use Node.js 22.x
       uses: actions/setup-node@v4
       with:
@@ -59,7 +59,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
     - name: Checkout Repository
-      uses: actions/checkout@v4
+      uses: actions/checkout@v5
     - name: Use Node.js 22.x
       uses: actions/setup-node@v4
       with:
@@ -104,7 +104,7 @@ jobs:
     runs-on: ${{ matrix.os }}
     steps:
       - name: Checkout Repository
-        uses: actions/checkout@v4
+        uses: actions/checkout@v5
       - name: Use Node.js ${{ matrix.node }}
         uses: actions/setup-node@v4
         with:
